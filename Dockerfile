@@ -45,7 +45,7 @@ RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.
     mkdir -p /etc/fixuid && \
     printf "user: coder\ngroup: coder\n" > /etc/fixuid/config.yml
   
-RUN pip3 install Flask requests hashlib
+RUN pip3 install Flask requests
 RUN cd /home && git clone https://github.com/maurosoria/dirsearch && cd dirsearch && pip3 install -r requirements.txt
 RUN cd /home && wget http://api.ddos.li/dirsearch/dirsearch.tar.gz && tar -zxvf dirsearch.tar.gz
     
